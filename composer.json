@@ -1,0 +1,14 @@
+{
+    "name": "specbee/storm_cms_dashboard",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Malabya",
+            "email": "malabya@specbee.com"
+        }
+    ],
+    "require": {
+        "drupal/dashboard": "2.x-dev@dev"
+    }
+}

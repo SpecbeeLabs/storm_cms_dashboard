@@ -1,0 +1,7 @@
+name: Storm CMS Dashboard
+description: Provides widgets to be placed on User Dashboard(s).
+package: Storm CMS
+type: module
+core_version_requirement: ^10 || ^11
+dependencies:
+  - dashboard:dashboard
