@@ -1,0 +1,25 @@
+<div class="config-status-block">
+  <h4>{{ status_message }}</h4>
+
+  {% if changes|length > 0 %}
+    <ul>
+      {% if changes.create is defined %}
+        <li>{{ 'New: ' ~ changes.create }}</li>
+      {% endif %}
+      {% if changes.update is defined %}
+        <li>{{ 'Changed: ' ~ changes.update }}</li>
+      {% endif %}
+      {% if changes.delete is defined %}
+        <li>{{ 'Deleted: ' ~ changes.delete }}</li>
+      {% endif %}
+      {% if changes.rename is defined %}
+        <li>{{ 'Renamed: ' ~ changes.rename }}</li>
+      {% endif %}
+
+      <a href="{{ path('config.sync') }}">{{ 'Click here to see detailed configuration changes.'|t }}</a>
+
+    </ul>
+  {% else %}
+    <p>{{ 'All configurations are up-to-date.' }}</p>
+  {% endif %}
+</div>
