@@ -1,0 +1,21 @@
+<div class="db-log-summary-block">
+  {% if error_display %}
+    <div class="db-log-header">
+      <a href="#" class="show-error-info">{{ 'Show error info'|t }}</a>
+    </div>
+    <div class="db-log-summary">
+      <div class="log-item">
+        <span class="log-count">{{ criticals ~ " Critical(s)" }}</span>
+      </div>
+      <div class="log-item">
+        <span class="log-count">{{ warnings ~ " Warning(s)" }}</span>
+      </div>
+    </div>
+  {% else %}
+    <div>
+      <span class="err-message">
+        {{ 'Please enable DB Log module'|t }} <a href="{{ path('system.modules_list') }}">{{ 'here'|t }}</a>.
+      </span>
+    </div>
+  {% endif %}
+</div>
